@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Tidsadasdsadtle</title>
+    <title>CountDown</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body align="center">
+<div class="container-enter">
+    <div class="enter-data-text">Введите дату:</div>
+    <form class="header-container">
+        <input class="field-input-data" placeholder="DD.MM.YYYY HH:MM:SS">
+        <button type="submit" class="btn-calculate-countdown">Расчитать 🤖</button>
+    </form>
 
+
+    <div class="result-block">
+        <div class="rest-of-time">Осталось времени:</div>
+        <div class="result-time">31.12.0001 12:59:59</div>
+    </div>
+</div>
+<script type="module" src="main.js"></script>
 </body>
 </html>
