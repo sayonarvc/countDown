@@ -41,7 +41,7 @@ export function logicCalculateTime() {
 
   const seconds = differenceInSeconds(futureDateTime, currentDateTime);
 
-  const result = `${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  const result = `${days}:${months}:${years} ${hours}:${minutes}:${seconds}`;
 
   return result;
 }
