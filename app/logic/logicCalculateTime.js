@@ -9,6 +9,7 @@ import {
   parseISO
 } from 'date-fns';
 import {isValidFutureDate} from '../validate/validate';
+import {updateElementTime} from '../domManagers/domManager';
 
 export function logicCalculateTime() {
   const dateTime = inputDate.value;
@@ -43,4 +44,17 @@ export function logicCalculateTime() {
   const result = `${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
 
   return result;
+}
+
+export function updateTimeInterval() {
+  function update() {
+    const result = logicCalculateTime();
+    if (result) {
+      updateElementTime(result);
+    }
+  }
+
+  update();
+
+  setInterval(update, 1000);
 }

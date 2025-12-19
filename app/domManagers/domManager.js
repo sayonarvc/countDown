@@ -1,14 +1,22 @@
 import {inputDate, time} from '../fixtures/constans';
-import {logicCalculateTime} from '../logic/logicCalculateTime';
+
+const element = document.createElement('div');
 
 export function clearInputDate() {
   inputDate.value = '';
 }
 
-export const createElementTime = () => {
-  const element = document.createElement('div');
+export const createElementTime = (data) => {
   element.className = 'result-time';
-  element.textContent = logicCalculateTime();
+  element.textContent = data;
 
   time.appendChild(element);
 };
+
+export const updateElementTime = (data) => {
+  element.className = 'result-time';
+  element.textContent = data;
+
+  time.appendChild(element);
+};
+
