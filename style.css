@@ -10,7 +10,7 @@ body {
 
 .enter-data-text {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 25px;
     padding: 10px;
     font-style: italic;
