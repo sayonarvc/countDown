@@ -1,17 +1,21 @@
-import {clearInputDate, createElementTime} from './app/domManagers/domManager';
+import {createElementTime} from './app/domManagers/domManager';
 import {calculateBtn} from './app/fixtures/constans';
-import {logicCalculateTime} from './app/logic/logicCalculateTime';
+import {logicCalculateTime, updateTimeInterval} from './app/logic/logicCalculateTime';
 
 function showTime() {
   const data = logicCalculateTime();
   createElementTime(data);
 }
 
+function showUpdateTime() {
+  setInterval(updateTimeInterval, 1000);
+}
+
 
 function handleShowDateTime(e) {
   e.preventDefault();
   showTime();
-  clearInputDate();
+  showUpdateTime();
 }
 
 calculateBtn.addEventListener('click', handleShowDateTime);

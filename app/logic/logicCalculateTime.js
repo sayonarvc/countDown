@@ -47,14 +47,7 @@ export function logicCalculateTime() {
 }
 
 export function updateTimeInterval() {
-  function update() {
-    const result = logicCalculateTime();
-    if (result) {
-      updateElementTime(result);
-    }
-  }
+  const result = logicCalculateTime();
 
-  update();
-
-  setInterval(update, 1000);
+  updateElementTime(result);
 }
